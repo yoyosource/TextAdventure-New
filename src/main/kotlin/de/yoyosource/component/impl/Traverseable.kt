@@ -1,6 +1,6 @@
 package de.yoyosource.component.impl
 
-import de.yoyosource.Room
+import de.yoyosource.entity.Room
 import de.yoyosource.component.Component
 
 class Traverseable(val name: String): Component {
