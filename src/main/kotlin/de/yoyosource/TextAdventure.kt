@@ -1,5 +1,8 @@
 package de.yoyosource
 
-fun main() {
+import de.yoyosource.entity.Player
 
+fun main() {
+    var player = Player()
+    player.command("help")
 }

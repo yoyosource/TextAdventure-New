@@ -2,9 +2,13 @@ package de.yoyosource.entity
 
 import de.yoyosource.component.Component
 
-open class Entity {
+open class Entity(val name: String) {
 
     var components: MutableMap<Class<Component>, Component> = mutableMapOf()
+
+    fun forEachComponent(action: (Component) -> Unit) {
+        components.values.forEach(action)
+    }
 
     fun addComponent(component: Component) {
         components[component.javaClass] = component

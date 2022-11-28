@@ -3,7 +3,7 @@ package de.yoyosource.entity
 import de.yoyosource.component.impl.Inventory
 import de.yoyosource.component.impl.Traverseable
 
-class Room(val name: String): Entity() {
+class Room(name: String): Entity(name) {
 
     init {
         addComponent(Traverseable(name))
@@ -16,5 +16,9 @@ class Room(val name: String): Entity() {
         } else {
             getComponent(Inventory::class.java).add(entity)
         }
+    }
+
+    fun command(player: Player, entity: Entity, command: String, args: Array<String>) {
+
     }
 }
