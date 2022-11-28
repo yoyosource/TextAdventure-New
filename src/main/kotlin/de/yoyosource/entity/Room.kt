@@ -17,8 +17,4 @@ class Room(name: String): Entity(name) {
             getComponent(Inventory::class.java).add(entity)
         }
     }
-
-    fun command(player: Player, entity: Entity, command: String, args: Array<String>) {
-
-    }
 }

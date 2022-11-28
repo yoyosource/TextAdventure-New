@@ -1,0 +1,4 @@
+{
+    pickup.cannot(Du kannst keine weiteren Items halten)
+    room.not_found(Der Raum %s existiert nicht)
+}

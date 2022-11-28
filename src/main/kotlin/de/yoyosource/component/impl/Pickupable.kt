@@ -5,6 +5,7 @@ import de.yoyosource.entity.Entity
 import de.yoyosource.entity.Player
 
 object Pickupable: Component {
+
     override fun command(player: Player, entity: Entity, command: String, args: Array<String>) {
         if (command != "pickup") return
         if (args.size != 1) return
