@@ -2,7 +2,7 @@ package de.yoyosource.entity
 
 import de.yoyosource.component.Component
 
-class Entity {
+open class Entity {
 
     var components: MutableMap<Class<Component>, Component> = mutableMapOf()
 
