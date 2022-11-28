@@ -11,6 +11,14 @@ repositories {
 
 dependencies {
     testImplementation 'org.jetbrains.kotlin:kotlin-test'
+
+    fileTree(dir: 'libs', include: ['*.jar']).each {
+        implementation files(it)
+    }
+
+    implementation 'org.objenesis:objenesis:3.2'
+    implementation 'eu.infomas:annotation-detector:3.0.5'
+    implementation 'org.slf4j:slf4j-api:2.0.0-alpha1'
 }
 
 compileKotlin {

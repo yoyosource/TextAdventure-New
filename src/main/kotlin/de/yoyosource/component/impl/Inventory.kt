@@ -17,7 +17,7 @@ open class Inventory(val canHold: (List<Entity>, Entity) -> Boolean = { _, _ -> 
     fun remove(e: Entity) = entities.remove(e)
 
     fun invCommand(player: Player, command: String, args: Array<String>) {
-        entities.forEach {e ->
+        entities.forEach { e ->
             e.forEachComponent {
                 it.command(player, e, command, args)
             }

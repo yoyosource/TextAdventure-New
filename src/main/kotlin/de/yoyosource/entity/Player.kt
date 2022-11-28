@@ -1,7 +1,9 @@
 package de.yoyosource.entity
 
 import de.yoyosource.component.impl.Inventory
+import yapion.annotations.`object`.YAPIONData
 
+@YAPIONData(cascading = true)
 class Player: Inventory() {
     var room: Room? = null
 
@@ -31,9 +33,11 @@ class Player: Inventory() {
                 commands.forEach { println(it) }
             }
             "look", "info" -> {
+                if (room == null) return
                 TODO()
             }
             "drop" -> {
+                if (room == null) return
                 TODO()
             }
         }
